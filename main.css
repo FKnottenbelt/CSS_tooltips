@@ -2,9 +2,10 @@
   --highlight: #141926;
   --primary: #129fc0;
   --off-white: #f6f6f6;
-  --sans: "Noto Sans JP", sans-serif;
+  --sans: 'Noto Sans JP', sans-serif;
   --border-radius: 5px;
   --shadow: 0 2px 15px 0 rgb(0 0 0 / 9%);
+  --border-radius: 5px;
 }
 
 body {
@@ -45,9 +46,20 @@ body {
 }
 
 .price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 1200px;
 }
 
 .price-grid > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: fit-content;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary);
 }
 
 .price-grid > .item > .details {
@@ -57,6 +69,7 @@ body {
 }
 
 .price-grid > .item > .banner img {
+  width: 100%;
 }
 
 .price-grid > .item > .details > .feature-container {
